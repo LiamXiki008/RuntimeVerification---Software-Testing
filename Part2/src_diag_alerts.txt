@@ -1,0 +1,20 @@
+digraph _logic_alerts {
+rankdir=LR;
+node [shape = circle]; postAlert deleteAlerts initialState;
+node [shape = octagon]; badState;
+node [shape = point]; _s_s;
+_s_s -> initialState;
+badState -> badState [ label = "(1) validPostAlert\\noOfAlerts >= 5 \\noOfAlerts ++ ; "];
+badState -> badState [ label = "(2) invalidPostAlert\\\\noOfAlerts ++ ; "];
+badState -> deleteAlerts [ label = "(3) deleteAlerts\\\\noOfAlerts = 0 ; "];
+initialState -> postAlert [ label = "(1) validPostAlert\\noOfAlerts < 5 \\noOfAlerts ++ ; "];
+initialState -> deleteAlerts [ label = "(2) deleteAlerts\\\\noOfAlerts = 0 ; "];
+initialState -> badState [ label = "(3) invalidPostAlert\\\\noOfAlerts ++ ; "];
+postAlert -> postAlert [ label = "(1) validPostAlert\\noOfAlerts < 5 \\noOfAlerts ++ ; "];
+postAlert -> deleteAlerts [ label = "(2) deleteAlerts\\\\noOfAlerts = 0 ; "];
+postAlert -> badState [ label = "(3) invalidPostAlert\\\\noOfAlerts ++ ; "];
+postAlert -> badState [ label = "(4) validPostAlert\\noOfAlerts == 5 \\noOfAlerts ++ ; "];
+deleteAlerts -> deleteAlerts [ label = "(1) deleteAlerts\\\\noOfAlerts = 0 ; "];
+deleteAlerts -> badState [ label = "(2) invalidPostAlert\\\\noOfAlerts ++ ; "];
+deleteAlerts -> postAlert [ label = "(3) validPostAlert\\noOfAlerts == 0 \\noOfAlerts ++ ; "];
+}

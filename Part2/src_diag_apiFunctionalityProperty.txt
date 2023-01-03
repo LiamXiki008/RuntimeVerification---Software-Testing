@@ -1,0 +1,13 @@
+digraph _logic_apiFunctionalityProperty {
+rankdir=LR;
+node [shape = circle]; invalidLogin validLogin initialState;
+node [shape = octagon]; badState;
+node [shape = point]; _s_s;
+_s_s -> initialState;
+validLogin -> initialState [ label = "(1) logOut\\loggedIn == true \\loggedIn = false ; "];
+validLogin -> validLogin [ label = "(2) viewAlerts\\loggedIn == true \\alertsBeingViewed = true ; "];
+initialState -> invalidLogin [ label = "(1) invalidCredentials\\loggedIn == false \\loggedIn = false ; "];
+initialState -> validLogin [ label = "(2) validCredentials\\loggedIn == false \\loggedIn = true ; "];
+initialState -> badState [ label = "(3) viewAlerts\\loggedIn == false \\alertsBeingViewed = true ; "];
+invalidLogin -> initialState [ label = "(1) login\\loggedIn == false \\loggedIn = false ; "];
+}

@@ -1,0 +1,48 @@
+IMPORTS{
+import main.Runner;
+}
+
+GLOBAL {
+	VARIABLES {
+		int noOfAlerts = 0;
+	}
+	
+	EVENTS {
+		validPostAlert() = {*.validPostAlert()}
+		invalidPostAlert() = {*.invalidPostAlert()}
+		deleteAlerts() = {*.deleteAlerts()}
+	}
+	
+	PROPERTY alerts {
+		STATES {
+			BAD {
+				badState
+			}
+			NORMAL {
+				postAlert
+				deleteAlerts
+			}
+			STARTING {
+				initialState
+			}
+		}
+		
+		TRANSITIONS {
+			initialState -> postAlert [validPostAlert\noOfAlerts < 5\noOfAlerts++;]
+			initialState -> deleteAlerts [deleteAlerts\\noOfAlerts = 0;]
+			initialState -> badState [invalidPostAlert\\noOfAlerts++;]
+			deleteAlerts -> deleteAlerts [deleteAlerts\\noOfAlerts = 0;]
+			deleteAlerts -> badState [invalidPostAlert\\noOfAlerts++;]
+			deleteAlerts -> postAlert [validPostAlert\noOfAlerts == 0\noOfAlerts++;]
+			postAlert -> postAlert [validPostAlert\noOfAlerts < 5\noOfAlerts++;]
+			postAlert -> deleteAlerts [deleteAlerts\\noOfAlerts = 0;]
+			postAlert -> badState [invalidPostAlert\\noOfAlerts++;]
+			postAlert -> badState [validPostAlert\noOfAlerts == 5\noOfAlerts++;]
+			badState -> badState [validPostAlert\noOfAlerts >= 5\noOfAlerts++;]
+			badState -> badState [invalidPostAlert\\noOfAlerts++;]
+			badState -> deleteAlerts [deleteAlerts\\noOfAlerts = 0;]
+			
+			
+		}
+	}
+}

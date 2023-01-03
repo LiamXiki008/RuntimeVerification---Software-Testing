@@ -1,0 +1,75 @@
+[alerts]AUTOMATON::> alerts() STATE::>initialState
+[alerts]MOVED ON METHODCALL: void main.Runner.validPostAlert() TO STATE::> postAlert
+[alerts]AUTOMATON::> alerts() STATE::>postAlert
+[alerts]MOVED ON METHODCALL: void main.Runner.validPostAlert() TO STATE::> postAlert
+[alerts]AUTOMATON::> alerts() STATE::>postAlert
+[alerts]MOVED ON METHODCALL: void main.Runner.validPostAlert() TO STATE::> postAlert
+[alerts]AUTOMATON::> alerts() STATE::>postAlert
+[alerts]MOVED ON METHODCALL: void main.Runner.invalidPostAlert() TO STATE::> !!!SYSTEM REACHED BAD STATE!!! badState 
+aspects._asp_Alerts0.ajc$before$aspects__asp_Alerts0$2$1b9b7c3c(_asp_Alerts0.aj:23)
+main.Runner.run(Runner.java:123)
+main.Runner.main(Runner.java:158) 
+[alerts]AUTOMATON::> alerts() STATE::>badState
+[alerts]AUTOMATON::> alerts() STATE::>badState
+[alerts]AUTOMATON::> alerts() STATE::>badState
+[alerts]AUTOMATON::> alerts() STATE::>badState
+[alerts]AUTOMATON::> alerts() STATE::>badState
+[alerts]MOVED ON METHODCALL: void main.Runner.invalidPostAlert() TO STATE::> !!!SYSTEM REACHED BAD STATE!!! badState 
+aspects._asp_Alerts0.ajc$before$aspects__asp_Alerts0$2$1b9b7c3c(_asp_Alerts0.aj:23)
+main.Runner.run(Runner.java:123)
+main.Runner.main(Runner.java:158) 
+[alerts]AUTOMATON::> alerts() STATE::>badState
+[alerts]MOVED ON METHODCALL: void main.Runner.invalidPostAlert() TO STATE::> !!!SYSTEM REACHED BAD STATE!!! badState 
+aspects._asp_Alerts0.ajc$before$aspects__asp_Alerts0$2$1b9b7c3c(_asp_Alerts0.aj:23)
+main.Runner.run(Runner.java:123)
+main.Runner.main(Runner.java:158) 
+[alerts]AUTOMATON::> alerts() STATE::>badState
+[alerts]MOVED ON METHODCALL: void main.Runner.validPostAlert() TO STATE::> !!!SYSTEM REACHED BAD STATE!!! badState 
+aspects._asp_Alerts0.ajc$before$aspects__asp_Alerts0$4$5097aa01(_asp_Alerts0.aj:41)
+main.Runner.run(Runner.java:140)
+main.Runner.main(Runner.java:158) 
+[alerts]AUTOMATON::> alerts() STATE::>badState
+[alerts]MOVED ON METHODCALL: void main.Runner.validPostAlert() TO STATE::> !!!SYSTEM REACHED BAD STATE!!! badState 
+aspects._asp_Alerts0.ajc$before$aspects__asp_Alerts0$4$5097aa01(_asp_Alerts0.aj:41)
+main.Runner.run(Runner.java:140)
+main.Runner.main(Runner.java:158) 
+[alerts]AUTOMATON::> alerts() STATE::>badState
+[alerts]MOVED ON METHODCALL: void main.Runner.validPostAlert() TO STATE::> !!!SYSTEM REACHED BAD STATE!!! badState 
+aspects._asp_Alerts0.ajc$before$aspects__asp_Alerts0$4$5097aa01(_asp_Alerts0.aj:41)
+main.Runner.run(Runner.java:140)
+main.Runner.main(Runner.java:158) 
+[alerts]AUTOMATON::> alerts() STATE::>badState
+[alerts]MOVED ON METHODCALL: void main.Runner.deleteAlerts() TO STATE::> deleteAlerts
+[alerts]AUTOMATON::> alerts() STATE::>deleteAlerts
+[alerts]MOVED ON METHODCALL: void main.Runner.validPostAlert() TO STATE::> postAlert
+[alerts]AUTOMATON::> alerts() STATE::>postAlert
+[alerts]MOVED ON METHODCALL: void main.Runner.deleteAlerts() TO STATE::> deleteAlerts
+[alerts]AUTOMATON::> alerts() STATE::>deleteAlerts
+[alerts]MOVED ON METHODCALL: void main.Runner.validPostAlert() TO STATE::> postAlert
+[alerts]AUTOMATON::> alerts() STATE::>postAlert
+[alerts]MOVED ON METHODCALL: void main.Runner.validPostAlert() TO STATE::> postAlert
+[alerts]AUTOMATON::> alerts() STATE::>postAlert
+[alerts]MOVED ON METHODCALL: void main.Runner.validPostAlert() TO STATE::> postAlert
+[alerts]AUTOMATON::> alerts() STATE::>postAlert
+[alerts]MOVED ON METHODCALL: void main.Runner.deleteAlerts() TO STATE::> deleteAlerts
+[alerts]AUTOMATON::> alerts() STATE::>deleteAlerts
+[alerts]MOVED ON METHODCALL: void main.Runner.validPostAlert() TO STATE::> postAlert
+[alerts]AUTOMATON::> alerts() STATE::>postAlert
+[alerts]MOVED ON METHODCALL: void main.Runner.validPostAlert() TO STATE::> postAlert
+[alerts]AUTOMATON::> alerts() STATE::>postAlert
+[alerts]MOVED ON METHODCALL: void main.Runner.validPostAlert() TO STATE::> postAlert
+[alerts]AUTOMATON::> alerts() STATE::>postAlert
+[alerts]MOVED ON METHODCALL: void main.Runner.validPostAlert() TO STATE::> postAlert
+[alerts]AUTOMATON::> alerts() STATE::>postAlert
+[alerts]MOVED ON METHODCALL: void main.Runner.validPostAlert() TO STATE::> postAlert
+[alerts]AUTOMATON::> alerts() STATE::>postAlert
+[alerts]MOVED ON METHODCALL: void main.Runner.deleteAlerts() TO STATE::> deleteAlerts
+[alerts]AUTOMATON::> alerts() STATE::>deleteAlerts
+[alerts]MOVED ON METHODCALL: void main.Runner.validPostAlert() TO STATE::> postAlert
+[alerts]AUTOMATON::> alerts() STATE::>postAlert
+[alerts]MOVED ON METHODCALL: void main.Runner.invalidPostAlert() TO STATE::> !!!SYSTEM REACHED BAD STATE!!! badState 
+aspects._asp_Alerts0.ajc$before$aspects__asp_Alerts0$2$1b9b7c3c(_asp_Alerts0.aj:23)
+main.Runner.run(Runner.java:123)
+main.Runner.main(Runner.java:158) 
+[alerts]AUTOMATON::> alerts() STATE::>badState
+[alerts]AUTOMATON::> alerts() STATE::>badState

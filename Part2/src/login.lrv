@@ -1,0 +1,43 @@
+IMPORTS{
+import main.Runner_2;
+}
+
+
+GLOBAL {
+	VARIABLES {
+		boolean loggedIn = false;
+		boolean alertsBeingViewed = false;
+	}
+	
+	EVENTS {
+		invalidCredentials() = {*.invalidCredentials()}
+		logOut() = {*.logOut()}
+		validCredentials() = {*.validCredentials()}
+		viewAlerts() = {*.viewAlerts()}
+		login() = {*.login()}
+	}
+	
+	PROPERTY apiFunctionalityProperty {
+		STATES {
+			BAD{
+				badState
+			}
+			NORMAL {
+				invalidLogin
+				validLogin
+			}
+			STARTING {
+				initialState
+			}
+		}
+		
+		TRANSITIONS {
+			initialState -> invalidLogin [invalidCredentials\loggedIn == false\loggedIn = false;]
+			initialState -> validLogin [validCredentials\loggedIn == false\loggedIn = true;]
+			validLogin -> initialState [logOut\loggedIn == true\loggedIn = false;]
+			validLogin -> validLogin [viewAlerts\loggedIn == true\alertsBeingViewed = true;]
+			invalidLogin -> initialState [login\loggedIn == false\loggedIn= false;]	
+			initialState -> badState [viewAlerts\loggedIn == false\alertsBeingViewed = true;]
+		}
+	}
+}
